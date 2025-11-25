@@ -1,42 +1,172 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
+  <!-- Bắt đầu tài liệu HTML.
+    → lang="vi-VN" cho biết ngôn ngữ chính của website là Tiếng Việt.
+    → Giúp SEO và trình đọc màn hình hiểu nội dung. -->
   <head>
+    <!-- → Mở phần <head>, nơi chứa các thông tin cấu hình như: font, CSS, meta, tiêu đề. -->
     <meta charset="UTF-8" />
+    <!-- → Chỉ định bảng mã ký tự là UTF-8, giúp hiển thị tiếng Việt đúng dấu. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- → Giúp website hiển thị đẹp trên mobile.
+    → width=device-width: chiều rộng theo đúng màn hình thiết bị.
+    → initial-scale=1.0: mức zoom ban đầu = 1. -->
     <title>learning landing page</title>
+    <!-- → Chữ hiển thị trên tab trình duyệt. -->
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- → Tối ưu tải font: trình duyệt “kết nối trước” đến Google Fonts để tải nhanh hơn. -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- → Tối ưu tải font từ server khác (gstatic).
+    → crossorigin giúp tải font có giới hạn bảo mật. -->
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap"
       rel="stylesheet"
     />
+    <!-- → Tải 2 font: Poppins và Sen từ Google Fonts. → Các giá trị wght@100..900 là độ đậm chữ. -->
 
     <!--reset CSS-->
     <link rel="stylesheet" href="./css/reset.css" />
+    <!--File này xoá bỏ style mặc định của trình duyệt, Giúp CSS dễ kiểm soát hơn. -->
+
     <!--Custom CSS-->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- → File CSS chính để tự thiết kế giao diện. -->
   </head>
+  <!-- → Kết thúc phần cấu hình <head>. -->
+
+  <!--PHẦN BODY – giao diện hiển thị  -->
   <body>
+    <!--→ Tất cả thứ xuất hiện trên màn hình đều nằm trong <body> -->
     <header class="header">
+      <!-- → Mở phần đầu trang. → Dùng class "header" để áp dụng CSS. -->
+
       <div class="maint-content">
+        <!-- → Một khung chứa để căn lề, giới hạn độ rộng. -->
+
         <div class="body">
+          <!-- → Một khung chứa để căn lề, giới hạn độ rộng. -->
+
           <!-- logo -->
           <a href="#"><img src="./img/BG.svg" alt="logo" class="logo" /></a>
+          <!-- → Link dẫn đến trang chủ. → Hiển thị ảnh logo. → alt="logo" giúp SEO + mô tả khi ảnh lỗi. -->
 
           <!-- navigation: thanh điều hướng -->
           <nav>
+            <!-- → Bắt đầu thanh điều hướng. -->
+
             <li><a class="active" href="#">Home</a></li>
+            <!-- → Mục Home. → class "active" làm nổi bật mục đang chọn. -->
+
             <li><a href="#">Courses</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Reviews</a></li>
+            <!-- → Ba mục menu khác. -->
           </nav>
+          <!-- → Kết thúc thanh điều hướng. -->
 
           <!--call to action button -->
           <a href="#" class="btn btn-sign-up">Signup</a>
+          <!-- → Nút hành động (CTA) ở góc phải (signup). -->
         </div>
       </div>
+      <!-- → Đóng các thẻ: body, main-content, và header. -->
     </header>
+
+    <!-- ⭐ SECTION HERO (phần giới thiệu chính) -->
+    <section class="hero">
+      <!-- → Mở phần Hero – phần lớn nhất ở đầu trang. -->
+
+      <div class="maint-content">
+        <!-- → Khung giới hạn chiều rộng. -->
+
+        <!-- ◼ Cột trái: ảnh + danh mục khóa học -->
+        <div class="left-box">
+          <!-- → Bắt đầu cột trái. -->
+
+          <img src="./img/guy-lesson 1.jpg" alt="guy lession" />
+          <!-- → Ảnh nhân vật minh họa cho trang học tập. -->
+
+          <!-- Danh mục khóa học -->
+          <div class="summary">
+            <!-- → Khối chứa danh sách các danh mục (3 item). -->
+
+            <div class="item">
+              <!--Item 1, → Một mục danh mục. -->
+
+              <img class="icon" src="./img/ui-design.svg" alt="UI/UX Design" />
+              <!-- → Icon đại diện cho UI/UX. -->
+
+              <div class="courses-content">
+                <span>20 Courses</span>
+                <span>UI/UX Design</span>
+              </div>
+              <!-- → Hiển thị số khóa học và tên danh mục. -->
+            </div>
+            <div class="item">
+              <img class="icon" src="./img/Development.svg" alt="Development" />
+              <div class="courses-content">
+                <span>20 Courses</span>
+                <span>Development</span>
+              </div>
+            </div>
+            <div class="item">
+              <img class="icon" src="./img/marketing.svg" alt="Marketing" />
+              <div class="courses-content">
+                <span>20 Courses</span>
+                <span>Marketing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ◼ Cột phải: tiêu đề + mô tả + nút -->
+        <div class="right-box">
+          <!-- → Mở phần nội dung cột phải. -->
+          <h1>Learn without limits and spread knowledge.</h1>
+          <!-- → Tiêu đề lớn của Hero. -->
+          <p class="desc">
+            Build new skills for that “this is my year” feeling with courses,
+            certificates, and degrees from world-class universities and
+            companies.
+          </p>
+          <!-- → thẻ P: Đoạn văn mô tả ngắn về mục tiêu khóa học. -->
+
+          <!-- Nút hành động -->
+          <div class="call-to-action">
+            <!-- → Khối chứa 2 nút. -->
+
+            <a href="" class="btn btn-see-courses">See Courses</a>
+            <!-- → Nút xem danh sách khóa học. -->
+
+            <button class="btn-watch-video">
+              <img src="./img/watch-video.svg" alt="Watch video" />
+              <span>Watch video</span>
+            </button>
+            <!-- → Nút xem video giới thiệu. -->
+          </div>
+
+          <span class="recent-engagement">Recent engagement</span>
+          <!-- → Tiêu đề mô tả số liệu. -->
+
+          <div class="engagement-metrics">
+            <!-- → Khối thống kê. -->
+            <div class="item">
+              <strong>50K</strong>
+              <span>Students</span>
+            </div>
+            <!-- → Item 1: số học viên. -->
+
+            <div class="item">
+              <strong>70+</strong>
+              <span>Courses</span>
+            </div>
+            <!-- → Item 2: số khóa học. -->
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

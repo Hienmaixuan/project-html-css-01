@@ -4,8 +4,10 @@
 
 :root {
   --primary-text-color: #171100;
+  --second-text-color: #5f5b53;
   --background-color: #fffcf4;
   --white-color: #fff;
+  --font-heading: Sen, sans-serif;
 }
 
 /*đổi đơn vị px sang rem, 1 rem =16px, cần quy đổi 1 rem = 10px thì quy đổi 1 rem = 62,5% */
@@ -26,15 +28,30 @@ li {
 }
 /* viết CSS cho phần Header ở đây/Header section */
 .header {
-  background-color: var(--background-color);
+  background: var(--background-color);
   padding-top: 44px;
   padding-bottom: 44px;
 }
-.header .maint-content {
+
+.maint-content {
   width: 1170px;
   margin-left: auto;
   margin-right: auto; /*nếu viết kiểu short hand: margin: 0 auto;*/
   max-width: calc(100% - 24px);
+}
+
+.btn {
+  width: 144px;
+  /* height: 50px; */
+  line-height: 50px;
+  background: var(--primary-text-color);
+  color: var(--white-color);
+  border-radius: 24.5px;
+  -webkit-border-radius: 24.5px;
+  -moz-border-radius: 24.5px;
+  -ms-border-radius: 24.5px;
+  -o-border-radius: 24.5px;
+  text-align: center;
 }
 
 .header .body {
@@ -84,18 +101,208 @@ li {
 }
 
 .header .body .btn-sign-up {
-  width: 144px;
-  /* height: 50px; */
-  line-height: 50px;
-  background: var(--primary-text-color);
-  color: var(--white-color);
-  border-radius: 24.5px;
-  -webkit-border-radius: 24.5px;
-  -moz-border-radius: 24.5px;
-  -ms-border-radius: 24.5px;
-  -o-border-radius: 24.5px;
-  text-align: center;
   margin-left: 49px;
 }
 
-/* Kết thúc Header ở đây/end header section */
+/* Hero section */
+.hero {
+  background: var(--background-color);
+}
+
+.hero .maint-content {
+  display: flex;
+}
+
+.hero .left-box {
+  width: 48.7%; /*tinh theo % vi phu thuoc vao don vi so sanh 100%*/
+  position: relative;
+}
+
+.hero .left-box > img {
+  width: 470px;
+  height: 685px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.hero .left-box .summary {
+  width: 270px;
+  height: 244px;
+  background-color: #fff;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  padding: 24px;
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+}
+
+.hero .left-box .item {
+  display: flex;
+  margin: 7px 0; /* top-bottom:7px   left-right:0 */
+  margin-top: 7px;
+  margin-bottom: 7px;
+  align-items: center;
+}
+
+.hero .left-box span {
+  display: block;
+}
+
+.hero .left-box .icon {
+  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+}
+.hero .left-box .courses-content span:first-child {
+  font-size: 1.4rem;
+  line-height: 26px;
+}
+
+.hero .left-box .courses-content span:last-child {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 30px;
+}
+
+.hero .left-box .summary .item:first-child {
+  margin-top: 0;
+}
+
+.hero .left-box .summary .item:last-child {
+  margin-bottom: 0;
+}
+
+.hero .right-box {
+  width: 51.3%;
+  padding-left: 116px;
+}
+
+.hero .right-box h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 5.8rem;
+  width: 488px;
+  line-height: 68px;
+  letter-spacing: -2%;
+  color: var(--primary-text-color);
+}
+
+.hero .right-box .desc {
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: var(--second-text-color);
+  margin-top: 28px;
+  margin-bottom: 38px;
+}
+
+.hero .right-box .call-to-action {
+  display: flex;
+}
+
+.hero .right-box .btn-see-courses {
+  width: 180px;
+  line-height: 64px;
+  background-color: #ffb900;
+  height: 64px;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  font-weight: 600px;
+  font-size: 1.8rem;
+}
+
+.hero .right-box .btn-watch-video {
+  display: flex;
+  background: none;
+  border: none;
+  align-items: center;
+  margin-left: 28px;
+}
+
+.hero .right-box .btn-watch-video span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: -10px;
+}
+
+.hero .right-box .recent-engagement {
+  /* Đảm bảo nó là một khối riêng */
+  display: inline-block;
+
+  /* Kiểu chữ */
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400; /* Medium/Regular */
+  line-height: 30px;
+  color: var(--second-text-color); /* Màu xám #5f5b53 */
+
+  /* Khoảng cách */
+  margin-top: 46px;
+  margin-bottom: 8px; /* Khoảng cách với các chỉ số bên dưới */
+}
+
+/* Container chứa 2 chỉ số (50K Students và 70+ Courses) */
+/* Trong HTML của bạn: <div> bao ngoài 2 .item */
+.hero .right-box .starts {
+  display: flex;
+  gap: 28px; /* Khoảng cách giữa 50K và 70+ */
+  margin-top: 8px; /* Điều chỉnh lại khoảng cách trên */
+}
+
+/* Giả sử bạn sửa lại HTML thành:
+<div class="engagement-metrics"> 
+    <div class="item">...</div>
+    <div class="item">...</div>
+</div>
+thì CSS sẽ là: */
+.hero .right-box .engagement-metrics {
+  display: flex;
+  gap: 40px; /* Tăng khoảng cách cho giống ảnh hơn */
+  margin-top: 8px;
+}
+
+/* Mỗi chỉ số (50K Students HOẶC 70+ Courses) */
+/* Trong HTML: <div class="item"> */
+.hero .right-box .item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Căn trái nội dung trong cột */
+}
+
+/* Giá trị số lượng (50K, 70+) - sử dụng thẻ <strong> */
+.hero .right-box .item strong {
+  font-family: var(--font-heading);
+  font-size: 4.4rem; /* 44px, Kích thước lớn */
+  font-weight: 700; /* Rất đậm */
+  color: #171100; /* Màu nhấn (giống nút See Courses) */
+  line-height: 1.1; /* Giảm chiều cao dòng */
+}
+
+/* Nhãn (Students, Courses) - sử dụng thẻ <span> */
+.hero .right-box .item span {
+  font-size: 1.6rem; /* 16px */
+  font-weight: 400;
+  color: var(--second-text-color);
+  line-height: 28px;
+}
+
+.hero .right-box > div:last-child {
+  display: flex;
+  gap: 40px;
+  margin-top: 8px;
+}
+
+.hero .right-box .item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
