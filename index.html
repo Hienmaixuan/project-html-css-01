@@ -43,7 +43,7 @@
     <header class="header">
       <!-- → Mở phần đầu trang. → Dùng class "header" để áp dụng CSS. -->
 
-      <div class="maint-content">
+      <div class="main-content">
         <!-- → Một khung chứa để căn lề, giới hạn độ rộng. -->
 
         <div class="body">
@@ -79,7 +79,7 @@
     <section class="hero">
       <!-- → Mở phần Hero – phần lớn nhất ở đầu trang. -->
 
-      <div class="maint-content">
+      <div class="main-content">
         <!-- → Khung giới hạn chiều rộng. -->
 
         <!-- ◼ Cột trái: ảnh + danh mục khóa học -->
@@ -165,6 +165,146 @@
             </div>
             <!-- → Item 2: số khóa học. -->
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- phần Out popular courses: 
+    Phân tích thiết kế mẫu: 
+    đưavào 1 thẻ section, đặt tên class là pupular courses(bao gồm toàn bộ Our popular courses), trong đó chia làm 2 phần: 
+
+    PHẦN 1: đến 2 icon <>, tiếp tục chia làm 2: 
+      1 phần bên trái : 
+        Sử dụng thẻ div để sau này dàn nganng 2 phần và sử dụng thẻ heading h2 cho Our popular courses (phần bên trên - Learn whithout ....đã sử dụng h1).
+      sử dụng thẻ p cho đoạn văn : build new skill....
+      1 phần chứa 2 nút bên tay phải.
+
+    PHẦN 2 gồm 3 ảnh tới hết 
+        bọc 3 item(ảnh) bằng thẻ div để sau này dàn ngang
+        trong mỗi khối item chia làm 2 khối: 
+        - khối chứa hình 
+        - khối chứa nội dung: 
+        + bọc basic web design và * 4.5 bằng thẻ div để sau này display: flex
+        + dùng thẻ p để chứa đoạn văn 
+        + bọc $120.75 và nút Book now bằng thẻ div để sau này display: flex -->
+
+    <section class="popular-courses">
+      <div class="main-content">
+        <div class="info-box">
+          <div class="heading">
+            <h2>Our popular courses</h2>
+            <p>
+              Build new skills with new trendy courses and shine for the
+              nextfuture career.
+            </p>
+          </div>
+          <div class="pre-next-button">
+            <button>
+              <img src="./img/previous-icon.svg" alt="previous-icon" />
+            </button>
+            <button>
+              <img src="./img/Next-icon.svg" alt="Next-icon" />
+            </button>
+          </div>
+        </div>
+        <div class="courses-list">
+          <div class="courses-item">
+            <img
+              class="thumbnail"
+              src="./img/Thumbnail 1.jpg"
+              alt="Basic Web Design"
+            />
+            <div class="courses-info">
+              <div class="heading">
+                <h3>Basic Web Design</h3>
+                <div>
+                  <img src="./img/Star 6.svg" alt="Star 6" />
+                  <span>4.5</span>
+                </div>
+              </div>
+              <p class="desc">
+                Get the best course, gain knowledge and shine for your future
+                career.
+              </p>
+              <div class="courses-price">
+                <span>$120.75</span>
+                <a href="#" class="btn btn-book-now">Book now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="courses-item">
+            <img
+              class="thumbnail"
+              src="./img/Thumbnail 2.jpg"
+              alt="Basic Web Design"
+            />
+            <div class="courses-info">
+              <div class="heading">
+                <h3>UI/UX design</h3>
+                <div>
+                  <img src="./img/Star 6.svg" alt="Star 6" />
+                  <span>4.5</span>
+                </div>
+              </div>
+              <p class="desc">
+                Get the best course, gain knowledge and shine for your future
+                career.
+              </p>
+              <div class="courses-price">
+                <span>$120.75</span>
+                <a href="#" class="btn btn-book-now">Book now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="courses-item">
+            <img
+              class="thumbnail"
+              src="./img/Thumbnail 3.jpg"
+              alt="Basic Web Design"
+            />
+            <div class="courses-info">
+              <div class="heading">
+                <h3>Web App design</h3>
+                <div>
+                  <img src="./img/Star 6.svg" alt="Star 6" />
+                  <span>4.5</span>
+                </div>
+              </div>
+              <p class="desc">
+                Get the best course, gain knowledge and shine for your future
+                career.
+              </p>
+              <div class="courses-price">
+                <span>$120.75</span>
+                <a href="#" class="btn btn-book-now">Book now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="main-content">
+        <div class="left-box">
+          <img class="avatar" src="./img/avatar.jpg" alt="Peter Moor" />
+          <span class="author">Peter Moor</span>
+          <span class="position">Student of Web Design</span>
+          <div class="slides">
+            <div class="slide-item"></div>
+            <div class="active slide-item"></div>
+            <div class="slide-item"></div>
+          </div>
+        </div>
+        <div class="right-box">
+          <img src="./img/Vector.svg" alt="quote" />
+          <p class="quote">
+            Not only does my resume look impressive—filled with the names and
+            logos of world-class institutions—but these certificates also bring
+            me closer to my career goals by validating the skills I've learned."
+          </p>
         </div>
       </div>
     </section>
