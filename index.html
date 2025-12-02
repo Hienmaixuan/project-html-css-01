@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
-  <!-- Bắt đầu tài liệu HTML.
-    → lang="vi-VN" cho biết ngôn ngữ chính của website là Tiếng Việt.
-    → Giúp SEO và trình đọc màn hình hiểu nội dung. -->
   <head>
     <!-- → Mở phần <head>, nơi chứa các thông tin cấu hình như: font, CSS, meta, tiêu đề. -->
     <meta charset="UTF-8" />
@@ -30,33 +27,38 @@
     <!--reset CSS-->
     <link rel="stylesheet" href="./css/reset.css" />
     <!--File này xoá bỏ style mặc định của trình duyệt, Giúp CSS dễ kiểm soát hơn. -->
-
     <!--Custom CSS-->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- → File CSS chính để tự thiết kế giao diện. -->
   </head>
-  <!-- → Kết thúc phần cấu hình <head>. -->
 
-  <!--PHẦN BODY – giao diện hiển thị  -->
+  <!--***********PHẦN BODY – giao diện hiển thị ***********
+   ------PHÂN TÍCH THIẾT KẾ-------
+   6 section cần thiết:
+   1- learn without limits ... (vì có màu nền khác). trong đó gồm 2 phần: 1- header và 2-hero( có 2 vùng right-box và left-box )
+   2- our popular courses 
+   3- testimonials/lời chứng thực (Peter moor)
+   4- learn outcomes... + take the next step ...
+   5- our blog (vì có màu nền khác)
+   6- footer/chân trang     
+  -->
   <body>
-    <!--→ Tất cả thứ xuất hiện trên màn hình đều nằm trong <body> -->
     <header class="header">
-      <!-- → Mở phần đầu trang. → Dùng class "header" để áp dụng CSS. -->
+      <!--thẻ header, class "header" để CSS tác động
+        lưu ý : 
+        - không tác động trực tiếp vào thẻ (độ ưu tiên thấp) mà phải tác động qua id hoặc class(thường dùng)
+        - không set lề vì viewport các thiết bị sẽ khác nhau        
+        -->
 
       <div class="main-content">
-        <!-- → Một khung chứa để căn lề, giới hạn độ rộng. -->
-
+        <!--div, class"main-content" chứa các nội dung của header -->
         <div class="body">
-          <!-- → Một khung chứa để căn lề, giới hạn độ rộng. -->
-
           <!-- logo -->
           <a href="#"><img src="./img/BG.svg" alt="logo" class="logo" /></a>
           <!-- → Link dẫn đến trang chủ. → Hiển thị ảnh logo. → alt="logo" giúp SEO + mô tả khi ảnh lỗi. -->
 
           <!-- navigation: thanh điều hướng -->
           <nav>
-            <!-- → Bắt đầu thanh điều hướng. -->
-
             <li><a class="active" href="#">Home</a></li>
             <!-- → Mục Home. → class "active" làm nổi bật mục đang chọn. -->
 
@@ -69,7 +71,7 @@
 
           <!--call to action button -->
           <a href="#" class="btn btn-sign-up">Signup</a>
-          <!-- → Nút hành động (CTA) ở góc phải (signup). -->
+          <!-- btn là dùng chung, btn-sigh-up: dùng riêng -->
         </div>
       </div>
       <!-- → Đóng các thẻ: body, main-content, và header. -->
@@ -103,6 +105,7 @@
                 <span>20 Courses</span>
                 <span>UI/UX Design</span>
               </div>
+
               <!-- → Hiển thị số khóa học và tên danh mục. -->
             </div>
             <div class="item">
@@ -169,16 +172,14 @@
       </div>
     </section>
 
-    <!-- phần Out popular courses: 
+    <!--********* Out popular courses *********************: 
     Phân tích thiết kế mẫu: 
     đưavào 1 thẻ section, đặt tên class là pupular courses(bao gồm toàn bộ Our popular courses), trong đó chia làm 2 phần: 
-
     PHẦN 1: đến 2 icon <>, tiếp tục chia làm 2: 
       1 phần bên trái : 
         Sử dụng thẻ div để sau này dàn nganng 2 phần và sử dụng thẻ heading h2 cho Our popular courses (phần bên trên - Learn whithout ....đã sử dụng h1).
       sử dụng thẻ p cho đoạn văn : build new skill....
       1 phần chứa 2 nút bên tay phải.
-
     PHẦN 2 gồm 3 ảnh tới hết 
         bọc 3 item(ảnh) bằng thẻ div để sau này dàn ngang
         trong mỗi khối item chia làm 2 khối: 
@@ -187,7 +188,6 @@
         + bọc basic web design và * 4.5 bằng thẻ div để sau này display: flex
         + dùng thẻ p để chứa đoạn văn 
         + bọc $120.75 và nút Book now bằng thẻ div để sau này display: flex -->
-
     <section class="popular-courses">
       <div class="main-content">
         <div class="info-box">
@@ -207,6 +207,7 @@
             </button>
           </div>
         </div>
+
         <div class="courses-list">
           <div class="courses-item">
             <img
@@ -286,6 +287,7 @@
       </div>
     </section>
 
+    <!--******* testimonials/lời chứng thực (Peter moor)****** -->
     <section class="testimonials">
       <div class="main-content">
         <div class="left-box">
@@ -308,5 +310,370 @@
         </div>
       </div>
     </section>
+
+    <!-- ********** Learner Outcomes (Kết quả Học tập)****** -->
+<!-- features 1 -->
+      <div class="features">
+        <div class="main-content">
+          <div class="body">
+            <div class="images">
+              <img
+                class="lower"
+                src="./img/H1.jpg"
+                alt="Learner outcomes through our awesome platform"
+              />
+              <img
+                src="././img/h2.jpg"
+                alt="Learner outcomes through our awesome platform"
+              />
+            </div>
+            <div class="content">
+              <h2 class="heading-lv2">
+                Learner outcomes through our awesome platform
+              </h2>
+              <p class="desc">
+                87% of people learning for professional development report
+                career benefits like getting a promotion, a raise, or starting a
+                new career.
+              </p>
+              <p class="desc">Lesson Impact Report (2022)</p>
+              <a href="#!" class="btn cta-btn">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- features 2 -->
+      <div class="features features-2nd">
+        <div class="main-content">
+          <div class="body">
+            <div class="images">
+              <img
+                src="./img/h3.jpg"
+                alt="Take the next step toward your personal and professional goals with Lesson."
+              />
+            </div>
+            <div class="content">
+              <h2 class="heading-lv2">
+                Take the next step toward your personal and professional goals
+                with Lesson.
+              </h2>
+              <p class="desc">
+                Take the next step toward. Join now to receive personalized and
+                more recommendations from the full Coursera catalog.
+              </p>
+              <a href="#!" class="btn cta-btn">Join Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blogs -->
+      <div class="blogs">
+        <div class="main-content">
+          <div class="blog-top">
+            <h2 class="heading-lv2">Our blog</h2>
+            <p class="desc">
+              Read our regular travel blog and know the latest update of tour
+              and travel
+            </p>
+          </div>
+
+          <div class="blog-list">
+            <!-- item 1 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./img/h4.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./img/h5.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="#!">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./img/h6.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="#!">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- item 4 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog1.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- item 5 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog2.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="#!">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- item 6 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog3.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="#!">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- item 7 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog1.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- item 8 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog2.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="#!">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+
+            <!-- item 9 -->
+            <div class="item">
+              <a href="#!">
+                <img
+                  src="./assets/img/blog3.jpg"
+                  alt="How to become a pro web designer in 2022 and get remot job?"
+                  class="thumb"
+                />
+              </a>
+              <div class="info">
+                <span class="date">21 November 2021</span>
+                <a href="#!">
+                  <h3 class="title">
+                    How to become a pro web designer in 2022 and get remot job?
+                  </h3>
+                </a>
+                <a href="#!" class="btn">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dots">
+            <span class="dot"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="main-content">
+        <div class="row">
+          <!-- column 1 -->
+          <div class="column">
+            <img src="./img/Logo.jpg" alt="Lesson." class="logo" />
+            <p class="desc">
+              Need to help for your dream Career? trust us. With Lesson, study
+              becomes a lot easier with us.
+            </p>
+            <div class="socials">
+              <a href="">
+                <img
+                  src="./img/Twitter.jpg"
+                  alt="twitter"
+                  class="icon"
+                />
+              </a>
+              <a href="">
+                <img src="./img/Facebook.jpg" alt="facebook" class="icon" />
+              </a>
+              <a href="">
+                <img
+                  src="./img/Linkedin.jpg"
+                  alt="linkedin"
+                  class="icon"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="./img/Instagram.jpg"
+                  alt="instagram"
+                  class="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="column">
+            <h3 class="title">Company</h3>
+            <ul class="list">
+              <li>
+                <a href="#!">About Us</a>
+              </li>
+              <li>
+                <a href="#!">Features</a>
+              </li>
+              <li>
+                <a href="#!">Our Pricing</a>
+              </li>
+              <li>
+                <a href="#!">Latest News</a>
+              </li>
+            </ul>
+          </div>
+          <!-- column 3 -->
+          <div class="column">
+            <h3 class="title">Support</h3>
+            <ul class="list">
+              <li>
+                <a href="#!">FAQ’s</a>
+              </li>
+              <li>
+                <a href="#!">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="#!">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#!">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- column 4 -->
+          <div class="column">
+            <h3 class="title">Address</h3>
+            <ul class="list">
+              <li>
+                <a href="#!">
+                  <strong>Location:</strong>
+                  27 Division St, New York, NY 10002, USA
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <strong>Email:</strong>
+                  email@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <strong>Phone:</strong>
+                  + 000 1234 567 890
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>Copyright ©2022 webdesign.gdn All rights reserved</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
